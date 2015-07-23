@@ -30,7 +30,7 @@ public class StudentService {
 		Groupp g = gs.find(group);
 		List<Student> students = g.getStudents();
 		if (students == null)
-		 	students = new ArrayList<>();
+		 	students = new ArrayList<Student>();
 		students.add(s);
 		g.setStudents(students);
 
@@ -46,7 +46,7 @@ public class StudentService {
 		Groupp g = gs.find(group);
 		List<Student> students = g.getStudents();
 		if (students == null)
-			students = new ArrayList<>();
+			students = new ArrayList<Student>();
 		students.add(s);
 		g.setStudents(students);
 
