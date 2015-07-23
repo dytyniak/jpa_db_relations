@@ -15,7 +15,7 @@ public class Program {
 	private String name;
 	private Double price;
 
-	@ManyToMany(targetEntity=User.class)
+	@ManyToMany
 	@JoinTable(name = "programs_users",  
 	       joinColumns=@JoinColumn(name="programs_id"), 
 	       inverseJoinColumns=@JoinColumn(name="users_id"))
