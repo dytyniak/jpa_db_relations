@@ -1,0 +1,64 @@
+package com.jobsukraine.manytomany.unidirectional;
+
+import javax.persistence.*;
+
+@Entity
+@NamedQueries({ @NamedQuery(name = "User.getAll", query = "SELECT u From User u"),
+		@NamedQuery(name = "User.getbyName", query = "SELECT u From User u where u.name=:name")
+
+})
+@Table(name = "users")
+public class User {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Long id;
+
+	private String name;
+	private int age;
+	private String email;
+
+	public String getMail() {
+		return email;
+	}
+
+	public void setMail(String mail) {
+		this.email = mail;
+	}
+
+	public User(String name, int age, String mail) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.email = mail;
+	}
+
+	public User() {
+		super();
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", age=" + age + "]";
+	}
+}
