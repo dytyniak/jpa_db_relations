@@ -20,20 +20,13 @@ public class Service {
 	/* SERVICES FOR USER!!! */
 
 	public void saveUser(User user) {
-		if (getUserByName(user.getName()) == null) {
+		
 			em.getTransaction().begin();
 			em.persist(user);
 			em.getTransaction().commit();
-		} else {
-			System.out.println("User with this name already exist!!!");
-		}
-
+		
 	}
 
-	public User getUserByName(String name) {
-		return em.createNamedQuery("User.getbyName", User.class).setParameter("name", name).getSingleResult();
-
-	}
 
 	/* SERVICES FOR PROGRAM!!! */
 
@@ -44,8 +37,4 @@ public class Service {
 		
 	}
 	
-	public Program getProgramByName(String name) {
-		return em.createNamedQuery("Program.getName", Program.class).setParameter("name", name).getSingleResult();
-		
-	}
 }

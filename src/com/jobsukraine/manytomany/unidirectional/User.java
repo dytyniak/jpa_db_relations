@@ -3,10 +3,6 @@ package com.jobsukraine.manytomany.unidirectional;
 import javax.persistence.*;
 
 @Entity
-@NamedQueries({ @NamedQuery(name = "User.getAll", query = "SELECT u From User u"),
-		@NamedQuery(name = "User.getbyName", query = "SELECT u From User u where u.name=:name")
-
-})
 @Table(name = "users")
 public class User {
 

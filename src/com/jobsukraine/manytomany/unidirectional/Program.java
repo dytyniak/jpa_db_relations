@@ -5,7 +5,6 @@ import java.util.List;
 import javax.persistence.*;
 
 @Entity
-@NamedQuery(name = "Program.getName", query = "select p from Program p where p.name=:name")
 @Table(name = "programs")
 public class Program {
 
