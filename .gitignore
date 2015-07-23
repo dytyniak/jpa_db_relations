@@ -3,3 +3,4 @@
 /src/com/jobsukraine/Connection.java
 *.project
 *.prefs
+/.settings
