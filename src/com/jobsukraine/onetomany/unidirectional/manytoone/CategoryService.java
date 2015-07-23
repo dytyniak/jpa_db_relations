@@ -12,7 +12,7 @@ public class CategoryService {
 		this.em = em;
 	}
 
-	public Category createEmployee(String name) {
+	public Category create(String name) {
 		em.getTransaction().begin();
 		Category category = new Category(name);
 		em.persist(category);
