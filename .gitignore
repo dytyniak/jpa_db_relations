@@ -1,6 +1,7 @@
 # Created by https://www.gitignore.io
 
 ### Java ###
+/target/
 *.class
 
 # Mobile Tools for Java (J2ME)
