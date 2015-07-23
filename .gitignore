@@ -1,2 +1,5 @@
 /bin/
 /target/
+/src/com/jobsukraine/Connection.java
+*.project
+*.prefs
