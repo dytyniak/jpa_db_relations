@@ -10,12 +10,11 @@ public class Program {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-
 	private int id;
 	private String name;
 	private Double price;
 
-	@ManyToMany
+	@ManyToMany(targetEntity=User.class)
 	@JoinTable(name = "programs_users",  
 	       joinColumns=@JoinColumn(name="programs_id"), 
 	       inverseJoinColumns=@JoinColumn(name="users_id"))

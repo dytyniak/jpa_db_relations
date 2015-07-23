@@ -37,4 +37,10 @@ public class Service {
 		
 	}
 	
+	/*public Program findProgramByName(String name) {
+		
+		return (Program) em.createQuery("Select p rom Program p where p.name =:name", Program.class).setParameter("name", name).getSingleResult();
+		
+	}*/
+	
 }
