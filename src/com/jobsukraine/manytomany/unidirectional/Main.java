@@ -43,16 +43,7 @@ public class Main {
 	        paintList.add(user3);
 	        paint.setUsers(paintList);
 
-	        em.getTransaction().begin();
-			em.persist(user);
-			em.persist(user1);
-			em.persist(user2);
-			em.persist(user3);
-			em.persist(office);
-			em.persist(photoshop);
-			em.persist(paint);
-			em.getTransaction().commit();
-            
+	    
 	    serv.saveUser(user);
 	    serv.saveUser(user1);
 	    serv.saveUser(user2);
